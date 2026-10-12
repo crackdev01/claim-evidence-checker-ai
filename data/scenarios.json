@@ -1,0 +1,158 @@
+{
+  "note": "All products, companies and evidence documents are fictional. The NordVita claim wordings come from the Complir take-home brief.",
+  "products": {
+    "hydra": {
+      "sku": "NV-HYD-050",
+      "name": "NordVita Hydra Serum 50 ml",
+      "category": "Cosmetics > Skin care > Leave-on face serum",
+      "market": "DK",
+      "formulationId": "F-101 rev. 3"
+    },
+    "cserum": {
+      "sku": "NV-CSR-030",
+      "name": "NordVita C-serum 30 ml",
+      "category": "Cosmetics > Skin care > Leave-on face serum",
+      "market": "DK",
+      "formulationId": "C-220"
+    },
+    "natcreme": {
+      "sku": "NV-NAT-050",
+      "name": "NordVita Natcreme 50 ml",
+      "category": "Cosmetics > Skin care > Leave-on night cream",
+      "market": "DK",
+      "formulationId": "N-310"
+    }
+  },
+  "evidence": {
+    "hydra-f101-12h": {
+      "title": "Clinical study report DNL-2026-014 (Dermatest Nordic)",
+      "file": "hydra-f101-12h.txt"
+    },
+    "hydra-f101-24h": {
+      "title": "Clinical study report DNL-2026-021 (Dermatest Nordic)",
+      "file": "hydra-f101-24h.txt"
+    },
+    "hydra-f098-24h": {
+      "title": "Clinical study report DNL-2025-087 (Dermatest Nordic)",
+      "file": "hydra-f098-24h.txt"
+    },
+    "ha-raw-material-datasheet": {
+      "title": "Supplier technical data sheet TDS-HP-LMW-07 (BioHumect)",
+      "file": "ha-raw-material-datasheet.txt"
+    },
+    "hydra-f101-24h-not-significant": {
+      "title": "Clinical study report CRX-2026-033 (Clinirex)",
+      "file": "hydra-f101-24h-not-significant.txt"
+    },
+    "cserum-c220-wrinkles-8w": {
+      "title": "Klinisk undersøgelse DNL-2025-118 (Dermatest Nordic)",
+      "file": "cserum-c220-wrinkles-8w.txt"
+    },
+    "hydra-consumer-survey": {
+      "title": "Forbrugerundersøgelse, intern opsummering (NordVita marketing)",
+      "file": "hydra-consumer-survey.txt"
+    },
+    "natcreme-customer-feedback": {
+      "title": "Kundefeedback januar-juni 2026 (NordVita kundeservice)",
+      "file": "natcreme-customer-feedback.txt"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "demo-a",
+      "group": "demo",
+      "label": "Demo A: 24-hour claim, study stops at 12 hours",
+      "claim": "Clinically proven 24-hour hydration.",
+      "product": "hydra",
+      "evidence": ["hydra-f101-12h"]
+    },
+    {
+      "id": "demo-b",
+      "group": "demo",
+      "label": "Demo B: 24-hour claim, 24-hour study on this formula",
+      "claim": "Clinically proven 24-hour hydration.",
+      "product": "hydra",
+      "evidence": ["hydra-f101-24h"]
+    },
+    {
+      "id": "demo-c",
+      "group": "demo",
+      "label": "Demo C: 24-hour claim, 24-hour study on another formula",
+      "claim": "Clinically proven 24-hour hydration.",
+      "product": "hydra",
+      "evidence": ["hydra-f098-24h"]
+    },
+    {
+      "id": "hydra-no-evidence",
+      "group": "more",
+      "label": "Hydration claim with no evidence",
+      "claim": "Clinically proven 24-hour hydration.",
+      "product": "hydra",
+      "evidence": []
+    },
+    {
+      "id": "hydra-ingredient-datasheet",
+      "group": "more",
+      "label": "Hydration claim backed only by an ingredient data sheet",
+      "claim": "Clinically proven 24-hour hydration.",
+      "product": "hydra",
+      "evidence": ["ha-raw-material-datasheet"]
+    },
+    {
+      "id": "hydra-conflicting",
+      "group": "more",
+      "label": "Hydration claim with two conflicting studies",
+      "claim": "Clinically proven 24-hour hydration.",
+      "product": "hydra",
+      "evidence": ["hydra-f101-24h", "hydra-f101-24h-not-significant"]
+    },
+    {
+      "id": "hydra-contradicting",
+      "group": "more",
+      "label": "Hydration claim contradicted by its only study",
+      "claim": "Clinically proven 24-hour hydration.",
+      "product": "hydra",
+      "evidence": ["hydra-f101-24h-not-significant"]
+    },
+    {
+      "id": "cserum-47-percent",
+      "group": "more",
+      "label": "NordVita claim 2: 47 % fewer wrinkles in 4 weeks",
+      "claim": "Klinisk bevist: Reducerer synlige rynker med 47 % på kun 4 uger. Bestil i dag på nordvita.dk.",
+      "product": "cserum",
+      "evidence": ["cserum-c220-wrinkles-8w"]
+    },
+    {
+      "id": "hydra-9-of-10",
+      "group": "more",
+      "label": "9 out of 10 women, based on an 11-person survey",
+      "claim": "9 ud af 10 kvinder oplevede mere fugtet hud efter 2 ugers brug.",
+      "product": "hydra",
+      "evidence": ["hydra-consumer-survey"]
+    },
+    {
+      "id": "cserum-puffery",
+      "group": "more",
+      "label": "Subjective sales language only",
+      "claim": "NordVita C-serum – Danmarks lækreste serum. Forkæl din hud.",
+      "product": "cserum",
+      "evidence": []
+    },
+    {
+      "id": "cserum-bestseller",
+      "group": "more",
+      "label": "NordVita claim 1: sales language plus \"bestseller\"",
+      "claim": "NordVita C-serum – Danmarks lækreste serum. Forkæl din hud med vores bestseller.",
+      "product": "cserum",
+      "evidence": []
+    },
+    {
+      "id": "natcreme-cure",
+      "group": "more",
+      "label": "NordVita claim 3: cures eczema and psoriasis",
+      "claim": "NYHED! Vores natcreme kurerer eksem og psoriasis på 14 dage – helt uden receptpligtig medicin. Tusindvis af danskere har allerede smidt cremerne fra lægen ud.",
+      "product": "natcreme",
+      "evidence": ["natcreme-customer-feedback"]
+    }
+  ]
+}

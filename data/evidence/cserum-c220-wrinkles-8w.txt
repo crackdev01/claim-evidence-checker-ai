@@ -1,0 +1,21 @@
+KLINISK UNDERSØGELSE - RESUMÉ
+Rapport nr.: DNL-2025-118
+Testcenter: Dermatest Nordic ApS, Aarhus
+Opdragsgiver: NordVita ApS
+Dato: 3. december 2025
+
+Testprodukt: NordVita C-serum, formel C-220 (batch 25-0907)
+
+Formål: At måle effekten af testproduktet på rynkedybden i området omkring øjnene (krageføder) ved daglig brug.
+
+Design: Åben undersøgelse uden kontrolgruppe med målinger før og under behandlingen.
+
+Deltagere: 40 kvinder i alderen 38-65 år med synlige krageføder. 37 gennemførte undersøgelsen.
+
+Metode: Produktet blev påført morgen og aften. Rynkedybden blev målt med 3D-billedanalyse (PRIMOS) ved start, efter 4 uger og efter 8 uger.
+
+Resultater (gennemsnitlig reduktion i rynkedybde i forhold til start):
+- Efter 4 uger: -21 % (p < 0,05)
+- Efter 8 uger: -47 % (p < 0,01)
+
+Konklusion: Daglig brug af NordVita C-serum (C-220) reducerede rynkedybden omkring øjnene med 21 % efter 4 uger og med 47 % efter 8 uger.

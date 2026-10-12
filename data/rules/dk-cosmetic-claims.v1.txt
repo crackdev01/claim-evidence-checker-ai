@@ -1,0 +1,74 @@
+# Supplied rule pack: performance claims for leave-on skin-care cosmetics sold in Denmark.
+# Version: dk-cosmetic-claims.v1, compiled 2026-10-11 from official sources.
+#
+# Format: lines starting with "#" are comments. Each passage starts with a header line
+#   [RULE-ID] Title | Source | Applicability
+# followed by the passage text. "[...]" marks words omitted by the compiler.
+# Danish provisions are quoted in the original Danish, EU provisions in the official English text.
+#
+# Sources:
+#   Markedsføringsloven: LBK nr. 1420 af 02/12/2024 (https://www.retsinformation.dk/eli/lta/2024/1420),
+#     § 5, stk. 2, nr. 2 as replaced by lov nr. 558 af 27/05/2025 § 1, nr. 4, in force 27/09/2026
+#     (https://www.retsinformation.dk/eli/lta/2025/558).
+#   Regulation (EC) No 1223/2009: https://eur-lex.europa.eu/eli/reg/2009/1223/oj
+#   Regulation (EU) No 655/2013: https://eur-lex.europa.eu/eli/reg/2013/655/oj
+
+[DK-MFL-5.1] Markedsføringsloven § 5, stk. 1 (misleading actions) | LBK nr. 1420 af 02/12/2024 | In force
+§ 5. En erhvervsdrivendes handelspraksis må ikke indeholde urigtige oplysninger eller i kraft af sin fremstillingsform eller på anden måde vildlede eller kunne forventes at vildlede gennemsnitsforbrugeren, uanset om oplysningerne er faktuelt korrekte.
+
+[DK-MFL-5.2.2] Markedsføringsloven § 5, stk. 2, nr. 2 (main characteristics, including results of tests on the product) | LBK nr. 1420 af 02/12/2024 as amended by lov nr. 558 af 27/05/2025 | In force from 27/09/2026
+Stk. 2. Vildledning efter stk. 1 kan relatere sig til et eller flere af følgende elementer: [...] 2) de væsentligste egenskaber ved produktet, herunder i hvilket omfang produktet står til rådighed, produktets fordele, risici, udførelse, sammensætning, miljømæssige eller sociale karakteristika, tilbehør, cirkularitetsaspekter såsom holdbarhed, reparationsmuligheder og genanvendelighed, eftersalgsservice og klagebehandling, metode og tidspunkt for fremstilling eller ydelse, levering, produktets hensigtsmæssighed, anvendelse, mængde, specifikationer, geografiske eller handelsmæssige oprindelse eller de resultater, som kan forventes opnået ved brugen, eller resultaterne af og de vigtigste elementer ved afprøvning eller kontrol foretaget af produktet,
+
+[DK-MFL-6.1] Markedsføringsloven § 6, stk. 1 (misleading omissions) | LBK nr. 1420 af 02/12/2024 | In force
+§ 6. En erhvervsdrivendes handelspraksis må ikke vildlede ved at udelade eller skjule væsentlige oplysninger eller præsentere væsentlige oplysninger på en uklar, uforståelig, dobbelttydig eller uhensigtsmæssig måde.
+
+[DK-MFL-8.1] Markedsføringsloven § 8, stk. 1 (material distortion test for §§ 4-7) | LBK nr. 1420 af 02/12/2024 | In force
+§ 8. Det er en betingelse for, at der er handlet i strid med §§ 4-7, at den pågældende handelspraksis væsentligt forvrider eller vil kunne forventes væsentligt at forvride den økonomiske adfærd hos gennemsnitsforbrugeren eller, hvis den pågældende handelspraksis rettes mod en særlig gruppe af forbrugere, hos et gennemsnitligt medlem af denne gruppe.
+
+[DK-MFL-9] Markedsføringsloven § 9 (practices listed in bilag 1 are always prohibited) | LBK nr. 1420 af 02/12/2024 | In force
+§ 9. Uanset at der ikke er handlet i strid med §§ 5-7, må en erhvervsdrivende ikke anvende de former for handelspraksis, der er opregnet i bilag 1.
+
+[DK-MFL-13] Markedsføringsloven § 13 (documentation of factual claims) | LBK nr. 1420 af 02/12/2024 | In force
+§ 13. Den erhvervsdrivende skal kunne dokumentere rigtigheden af oplysninger om faktiske forhold.
+
+[DK-MFL-BILAG1-17] Markedsføringsloven bilag 1, nr. 17 (always misleading: false claims to cure illness) | LBK nr. 1420 af 02/12/2024 | In force
+17) Det hævdes i modstrid med sandheden, at et produkt kan helbrede sygdomme, funktionsforstyrrelser eller misdannelser.
+
+[EU-1223-20.1] Regulation (EC) No 1223/2009 on cosmetic products, Article 20(1) (product claims) | OJ L 342, 22.12.2009 | Applies from 11/07/2013
+1. In the labelling, making available on the market and advertising of cosmetic products, text, names, trade marks, pictures and figurative or other signs shall not be used to imply that these products have characteristics or functions which they do not have.
+
+[EU-655-ART2] Regulation (EU) No 655/2013 (common criteria for cosmetic claims), Article 2 | CELEX 32013R0655 | Applies from 11/07/2013
+The responsible person referred to in Article 4 of Regulation (EC) No 1223/2009 shall ensure that the wording of the claim in relation to cosmetic products is in compliance with the common criteria set out in the Annex and is consistent with the documentation proving the effect claimed for the cosmetic product in the product information file referred to in Article 11 of Regulation (EC) No 1223/2009.
+
+[EU-655-1.2] Regulation (EU) No 655/2013, Annex, 1. Legal compliance, point (2) (average end user) | CELEX 32013R0655 | Applies from 11/07/2013
+The acceptability of a claim shall be based on the perception of the average end user of a cosmetic product, who is reasonably well-informed and reasonably observant and circumspect, taking into account social, cultural and linguistic factors in the market in question.
+
+[EU-655-2.2] Regulation (EU) No 655/2013, Annex, 2. Truthfulness, point (2) (ingredient properties) | CELEX 32013R0655 | Applies from 11/07/2013
+Ingredient claims referring to the properties of a specific ingredient shall not imply that the finished product has the same properties when it does not.
+
+[EU-655-2.3] Regulation (EU) No 655/2013, Annex, 2. Truthfulness, point (3) (opinions presented as verified claims) | CELEX 32013R0655 | Applies from 11/07/2013
+Marketing communications shall not imply that expressions of opinions are verified claims unless the opinion reflects verifiable evidence.
+
+[EU-655-3.1] Regulation (EU) No 655/2013, Annex, 3. Evidential support, point (1) (adequate and verifiable evidence) | CELEX 32013R0655 | Applies from 11/07/2013
+Claims for cosmetic products, whether explicit or implicit, shall be supported by adequate and verifiable evidence regardless of the types of evidential support used to substantiate them, including where appropriate expert assessments.
+
+[EU-655-3.2] Regulation (EU) No 655/2013, Annex, 3. Evidential support, point (2) (state of the art) | CELEX 32013R0655 | Applies from 11/07/2013
+Evidence for claim substantiation shall take into account state of the art practices.
+
+[EU-655-3.3] Regulation (EU) No 655/2013, Annex, 3. Evidential support, point (3) (studies relevant to the product and the benefit) | CELEX 32013R0655 | Applies from 11/07/2013
+Where studies are being used as evidence, they shall be relevant to the product and to the benefit claimed, shall follow well-designed, well-conducted methodologies (valid, reliable and reproducible) and shall respect ethical considerations.
+
+[EU-655-3.4] Regulation (EU) No 655/2013, Annex, 3. Evidential support, point (4) (level of evidence matches the claim) | CELEX 32013R0655 | Applies from 11/07/2013
+The level of evidence or substantiation shall be consistent with the type of claim being made, in particular for claims where lack of efficacy may cause a safety problem.
+
+[EU-655-3.5] Regulation (EU) No 655/2013, Annex, 3. Evidential support, point (5) (hyperbole) | CELEX 32013R0655 | Applies from 11/07/2013
+Statements of clear exaggeration which are not to be taken literally by the average end user (hyperbole) or statements of an abstract nature shall not require substantiation.
+
+[EU-655-3.6] Regulation (EU) No 655/2013, Annex, 3. Evidential support, point (6) (ingredient properties extrapolated to the product) | CELEX 32013R0655 | Applies from 11/07/2013
+A claim extrapolating (explicitly or implicitly) ingredient properties to the finished product shall be supported by adequate and verifiable evidence, such as by demonstrating the presence of the ingredient at an effective concentration.
+
+[EU-655-3.7] Regulation (EU) No 655/2013, Annex, 3. Evidential support, point (7) (weight of evidence) | CELEX 32013R0655 | Applies from 11/07/2013
+Assessment of the acceptability of a claim shall be based on the weight of evidence of all studies, data and information available depending on the nature of the claim and the prevailing general knowledge the end users.
+
+[EU-655-4.1] Regulation (EU) No 655/2013, Annex, 4. Honesty, point (1) (performance not beyond the evidence) | CELEX 32013R0655 | Applies from 11/07/2013
+Presentations of a product’s performance shall not go beyond the available supporting evidence.

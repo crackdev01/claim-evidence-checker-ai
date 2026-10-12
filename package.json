@@ -1,0 +1,41 @@
+{
+  "name": "complir-claim-checker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-aware marketing claim checker: does the supplied evidence support this claim under the supplied rules, and what should the reviewer do next?",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,green \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:web": "vite",
+    "demo:scripted": "concurrently -k -n demo,web -c yellow,green \"tsx scripts/scripted-demo.ts\" \"npm:dev:web\"",
+    "build": "vite build",
+    "start": "tsx server/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "eval": "tsx eval/run.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3"
+  }
+}

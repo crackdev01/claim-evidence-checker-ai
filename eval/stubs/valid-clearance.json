@@ -1,0 +1,25 @@
+{
+  "claimElements": [
+    { "id": "P", "type": "product", "text": "NordVita Hydra Serum 50 ml, formulation F-101 rev. 3", "requirement": "Evidence must concern formulation F-101 rev. 3.", "requiresSubstantiation": true },
+    { "id": "C1", "type": "method", "text": "Clinically proven", "requirement": "A controlled study on people.", "requiresSubstantiation": true },
+    { "id": "C2", "type": "duration", "text": "24-hour", "requirement": "A significant effect measured at 24 hours.", "requiresSubstantiation": true },
+    { "id": "C3", "type": "outcome", "text": "hydration", "requirement": "An instrumental measurement of skin hydration.", "requiresSubstantiation": true }
+  ],
+  "evidenceRelevance": [
+    { "elementId": "P", "evidenceId": "E1", "verdict": "supports", "evidenceShows": "The study tested the marketed formula.", "quote": "Test product: NordVita Hydra Serum, formula F-101 rev. 3" },
+    { "elementId": "C1", "evidenceId": "E1", "verdict": "supports", "evidenceShows": "A randomised, controlled study on 32 women.", "quote": "Single-centre, randomised, controlled study." },
+    { "elementId": "C2", "evidenceId": "E1", "verdict": "supports", "evidenceShows": "A significant increase at 24 hours.", "quote": "24 hours: +14 % (p < 0.01)" },
+    { "elementId": "C3", "evidenceId": "E1", "verdict": "supports", "evidenceShows": "Hydration measured with a Corneometer.", "quote": "Skin surface hydration was measured with a Corneometer CM 825" }
+  ],
+  "applicableRules": [
+    { "ruleId": "EU-655-3.3", "quote": "relevant to the product and to the benefit claimed", "application": "The study tested this formulation and measured the claimed benefit at the claimed time." },
+    { "ruleId": "DK-MFL-13", "quote": "Den erhvervsdrivende skal kunne dokumentere rigtigheden af oplysninger om faktiske forhold.", "application": "The report documents the factual claim." }
+  ],
+  "findings": [
+    { "severity": "info", "summary": "Keep report DNL-2026-021 on file as the claim's documentation.", "ruleIds": ["DK-MFL-13"], "evidenceIds": ["E1"], "elementIds": [] }
+  ],
+  "missingEvidence": [],
+  "assessment": "no_issue_found",
+  "explanation": "A controlled clinical study on formulation F-101 rev. 3 shows a significant increase in skin hydration 24 hours after application, which supports every element of the claim.",
+  "nextAction": { "type": "approve", "detail": "Approve and keep report DNL-2026-021 in the product information file.", "suggestedRewrite": null }
+}

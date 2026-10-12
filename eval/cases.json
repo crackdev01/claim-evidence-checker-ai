@@ -1,0 +1,195 @@
+{
+  "labelSource": "provisional (author), not expert-reviewed",
+  "labelledOn": "2026-10-11, before any model run",
+  "notes": [
+    "expected.flaggedAnyOf: at least one claim element of one of these types must end up without support (a non-'supports' verdict, or listed as missing evidence). '*' means any element type other than 'product'. An empty list means nothing has to be flagged.",
+    "expected.citeAnyOf: at least one of these rule IDs must be cited (with a verified quote) in applicableRules or findings.",
+    "heldOut cases are not used while tuning the prompt and are reported separately.",
+    "stub cases replace the model with a scripted response, so they test the deterministic layer, not model judgment."
+  ],
+  "cases": [
+    {
+      "id": "missing-evidence",
+      "scenario": "hydra-no-evidence",
+      "category": "missing evidence",
+      "heldOut": false,
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": ["duration", "method", "outcome"],
+        "citeAnyOf": ["DK-MFL-13", "EU-655-3.1", "EU-655-ART2"]
+      },
+      "rationale": "A factual efficacy claim with no documentation. § 13 and 655/2013 3(1) require evidence; nothing contradicts the claim yet, so the next step is to request evidence."
+    },
+    {
+      "id": "demo-a-duration-gap",
+      "scenario": "demo-a",
+      "category": "unsupported scope (duration)",
+      "heldOut": false,
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": ["duration"],
+        "citeAnyOf": ["EU-655-4.1", "EU-655-3.3", "EU-655-3.1", "DK-MFL-13", "EU-655-ART2"]
+      },
+      "rationale": "Right product, outcome and method, but measurements stop at 12 hours. The 24-hour element is unsupported; a 24-hour study could still support it, so this is an evidence gap rather than a violation."
+    },
+    {
+      "id": "demo-b-clean-pass",
+      "scenario": "demo-b",
+      "category": "supported claim",
+      "heldOut": false,
+      "expected": {
+        "assessment": "no_issue_found",
+        "flaggedAnyOf": [],
+        "citeAnyOf": ["EU-655-3.1", "EU-655-3.3", "DK-MFL-13", "EU-655-ART2", "EU-655-4.1"]
+      },
+      "rationale": "Controlled clinical study on the marketed formula (F-101 rev. 3) with a significant result at 24 hours."
+    },
+    {
+      "id": "demo-c-formulation-mismatch",
+      "scenario": "demo-c",
+      "category": "irrelevant evidence (other formulation)",
+      "heldOut": false,
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": ["product"],
+        "citeAnyOf": ["EU-655-3.3", "EU-655-ART2", "DK-MFL-13", "EU-655-3.1"]
+      },
+      "rationale": "The study tested development formula F-098, not the marketed F-101 rev. 3. Under 655/2013 3(3) studies must be relevant to the product; bridging evidence or a study on F-101 is needed."
+    },
+    {
+      "id": "ingredient-datasheet",
+      "scenario": "hydra-ingredient-datasheet",
+      "category": "irrelevant evidence (raw material, in vitro)",
+      "heldOut": false,
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": ["product", "method"],
+        "citeAnyOf": ["EU-655-2.2", "EU-655-3.6", "EU-655-3.3"]
+      },
+      "rationale": "Supplier data on the hyaluronic acid raw material, tested in vitro. It mentions 24 hours and hydration but says nothing about the finished product on people (655/2013 2(2), 3(6))."
+    },
+    {
+      "id": "conflicting-studies",
+      "scenario": "hydra-conflicting",
+      "category": "conflicting evidence",
+      "heldOut": true,
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": ["duration"],
+        "citeAnyOf": ["EU-655-3.7", "EU-655-4.1", "EU-655-3.1"]
+      },
+      "rationale": "Two studies on F-101 rev. 3 disagree at 24 hours. The weight of evidence (655/2013 3(7)) needs a reviewer's judgment; the claim cannot be cleared automatically."
+    },
+    {
+      "id": "contradicting-study",
+      "scenario": "hydra-contradicting",
+      "category": "contradicting evidence",
+      "heldOut": false,
+      "expected": {
+        "assessment": "potential_violation",
+        "flaggedAnyOf": ["duration"],
+        "citeAnyOf": ["EU-655-4.1", "DK-MFL-5.1", "DK-MFL-5.2.2", "EU-1223-20.1"]
+      },
+      "rationale": "The only study on this formula shows no significant effect at 24 hours, so the claim goes beyond the available evidence (655/2013 4(1)) and is likely misleading (§ 5)."
+    },
+    {
+      "id": "nordvita-2-47-percent",
+      "scenario": "cserum-47-percent",
+      "category": "unsupported scope (magnitude and duration)",
+      "heldOut": true,
+      "expected": {
+        "assessment": "potential_violation",
+        "flaggedAnyOf": ["magnitude", "duration"],
+        "citeAnyOf": ["EU-655-4.1", "DK-MFL-5.1", "DK-MFL-5.2.2", "EU-1223-20.1"]
+      },
+      "rationale": "The study shows -21 % at 4 weeks and -47 % only at 8 weeks. The claim combines the larger number with the shorter time, overstating the test results."
+    },
+    {
+      "id": "nordvita-9-of-10-survey",
+      "scenario": "hydra-9-of-10",
+      "category": "weak method (self-assessment, small selected sample)",
+      "heldOut": false,
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": ["method", "population", "magnitude"],
+        "citeAnyOf": ["EU-655-2.3", "EU-655-3.3", "EU-655-3.4", "EU-655-3.1"]
+      },
+      "rationale": "10 of 11 hand-picked existing customers agreeing in a questionnaire cannot support a general '9 out of 10 women' statement. A properly designed consumer test could, so this is an evidence gap. Some reviewers would call it a potential violation."
+    },
+    {
+      "id": "nordvita-1-puffery",
+      "scenario": "cserum-puffery",
+      "category": "no substantiation needed (hyperbole)",
+      "heldOut": false,
+      "expected": {
+        "assessment": "no_issue_found",
+        "flaggedAnyOf": [],
+        "citeAnyOf": ["EU-655-3.5"]
+      },
+      "rationale": "'Danmarks lækreste serum' and 'Forkæl din hud' are subjective praise that the average consumer does not take literally (655/2013 3(5)). Tests that the system does not demand evidence for everything. Some reviewers would still want a basis for the superlative."
+    },
+    {
+      "id": "nordvita-1-bestseller",
+      "scenario": "cserum-bestseller",
+      "category": "missing evidence (factual element inside sales language)",
+      "heldOut": true,
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": ["*"],
+        "citeAnyOf": ["DK-MFL-13", "EU-655-3.1"]
+      },
+      "rationale": "Same sales language as the puffery case, plus 'vores bestseller', which is a verifiable factual statement (sales data) that must be documented under § 13."
+    },
+    {
+      "id": "nordvita-3-cure-claim",
+      "scenario": "natcreme-cure",
+      "category": "always-prohibited claim",
+      "heldOut": false,
+      "expected": {
+        "assessment": "potential_violation",
+        "flaggedAnyOf": ["outcome"],
+        "citeAnyOf": ["DK-MFL-BILAG1-17", "DK-MFL-9", "EU-1223-20.1"]
+      },
+      "rationale": "Claims a cosmetic cures eczema and psoriasis. Anecdotes are not evidence, and the supplied evidence itself says no clinical studies exist. Bilag 1 nr. 17 (via § 9) and Art. 20(1) apply; escalate."
+    },
+    {
+      "id": "stub-malformed-output",
+      "scenario": "demo-b",
+      "category": "invalid model response (malformed JSON)",
+      "heldOut": false,
+      "stub": "stubs/malformed.txt",
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": [],
+        "citeAnyOf": []
+      },
+      "rationale": "Truncated JSON must fail closed: manual review, never a clearance."
+    },
+    {
+      "id": "stub-fabricated-citations",
+      "scenario": "demo-b",
+      "category": "invalid model response (unknown rule ID, invented quote)",
+      "heldOut": false,
+      "stub": "stubs/fabricated-citations.json",
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": [],
+        "citeAnyOf": []
+      },
+      "rationale": "Schema-valid output that clears the claim while citing a rule ID that does not exist and a quote that is not in the evidence. The citation checks must downgrade it."
+    },
+    {
+      "id": "stub-clears-wrong-formulation",
+      "scenario": "demo-c",
+      "category": "invalid model response (clears using another formulation)",
+      "heldOut": false,
+      "stub": "stubs/clears-wrong-formulation.json",
+      "expected": {
+        "assessment": "needs_evidence_or_review",
+        "flaggedAnyOf": [],
+        "citeAnyOf": []
+      },
+      "rationale": "Every quote is genuine, but the supporting study names formula F-098, not F-101 rev. 3. The deterministic identity check must block the clearance on its own."
+    }
+  ]
+}

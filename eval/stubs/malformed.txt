@@ -1,0 +1,1 @@
+{"claimElements":[{"id":"P","type":"product","text":"NordVita Hydra Serum 50 ml, formulation F-101 rev. 3","requirement":"Evidence must concern formulation F-101 rev. 3.","requiresSubstantiation":true},{"id":"C1","type":"duration","text":"24-hour","requir

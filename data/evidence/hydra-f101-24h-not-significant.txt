@@ -1,0 +1,23 @@
+CLINICAL STUDY REPORT - SUMMARY
+Report no.: CRX-2026-033
+Test facility: Clinirex Skin Research AB, Malmö, Sweden
+Sponsor: NordVita ApS
+Report date: 9 July 2026
+
+Test product: NordVita Hydra Serum, formula F-101 rev. 3 (batch 26-0611)
+
+Objective: To verify the duration of the hydrating effect after a single application.
+
+Design: Single-centre, randomised, controlled study with one treated and one untreated area on the volar forearms of each participant.
+
+Participants: 30 healthy women and men aged 22-61 with dry skin. 29 completed the study.
+
+Procedure: A single application of 2 mg/cm2 of the test product. Skin surface hydration was measured with a Corneometer CM 825 at baseline and 2, 6, 12 and 24 hours after application under controlled conditions.
+
+Results: Mean change in skin hydration versus baseline, treated area compared with the untreated control area:
+- 2 hours: +35 % (p < 0.001)
+- 6 hours: +22 % (p < 0.001)
+- 12 hours: +12 % (p = 0.03)
+- 24 hours: +3 % (p = 0.41, not statistically significant)
+
+Conclusion: A statistically significant increase in skin hydration was observed up to 12 hours after application. At 24 hours, hydration was not significantly different from the untreated control area.
